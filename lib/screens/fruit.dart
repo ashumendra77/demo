@@ -2,19 +2,6 @@ import 'package:demo/model/fruit_model.dart';
 import 'package:flutter/material.dart';
 
 class FruitScreen extends StatefulWidget {
-  // List<FruitModel> fm;
-  // FruitScreen({@required this.fm});
-  // static List<String> fruitlist = [
-  //   'mango',
-  //   'grapes',
-  //   'apple',
-  //   'banana',
-  //   'gauva',
-  //   'pineapple',
-  //   'oranges',
-  //   'watermelon'
-  // ];
-
   @override
   _FruitScreenState createState() => _FruitScreenState();
 }
@@ -48,14 +35,14 @@ class _FruitScreenState extends State<FruitScreen> {
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.grey[400]),
                     child: TextFormField(
-                      controller: _fruitController,
-                      onChanged: onItemChanged,
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          contentPadding: EdgeInsets.only(left: 10),
-                          labelText: 'Search',
-                          suffixIcon: Icon(Icons.search, color: Colors.white))
-                    ),
+                        controller: _fruitController,
+                        onChanged: onItemChanged,
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(left: 10),
+                            labelText: 'Search',
+                            suffixIcon:
+                                Icon(Icons.search, color: Colors.white))),
                   ))
             ],
           ),
@@ -68,10 +55,9 @@ class _FruitScreenState extends State<FruitScreen> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: ListTile(
-                  leading: Text('${index + 1}'),
-                  title: Text(newDataList[index].fname),
-                  tileColor: Colors.blue[300]
-                ),
+                    leading: Text('${index + 1}'),
+                    title: Text(newDataList[index].fname),
+                    tileColor: Colors.blue[300]),
               ),
             );
           },

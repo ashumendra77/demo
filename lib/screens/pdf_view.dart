@@ -61,21 +61,18 @@ class _BookScreenState extends State<BookScreen> {
                   children: [
                     Expanded(
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20),
-                        child: Image(
-                            height: 150,
-                            width: 100,
-                            image: AssetImage(newDataList[index].imageUrl),
-                            fit: BoxFit.fill),
-                      ),
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image(
+                              height: 150,
+                              width: 100,
+                              image: AssetImage(newDataList[index].imageUrl),
+                              fit: BoxFit.fill)),
                     ),
                     Expanded(
                       child: Column(
                         children: [
-                          Text(
-                            newDataList[index].name,
-                            textAlign: TextAlign.center,
-                          ),
+                          Text(newDataList[index].name,
+                              textAlign: TextAlign.center),
                           MaterialButton(
                               onPressed: () {
                                 Navigator.push(

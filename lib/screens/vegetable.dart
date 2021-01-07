@@ -19,18 +19,6 @@ class _VegtableScreenState extends State<VegtableScreen> {
     });
   }
 
-  List<String> vegitablelist = [
-    'ladyfinger',
-    'potato',
-    'tomato',
-    'brinjal',
-    'pumpkin',
-    'onion',
-    'cabbaige',
-    'corriender'
-        'chilli',
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,23 +26,24 @@ class _VegtableScreenState extends State<VegtableScreen> {
           title: Row(
             children: [
               Expanded(child: Text('Vegetable')),
-              Expanded(flex: 2,
+              Expanded(
+                  flex: 2,
                   child: Container(
-                height: 50,
-                margin: EdgeInsets.only(top: 20, bottom: 20),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    color: Colors.grey[400]),
-                child: TextFormField(
-                  controller: _vegetableController,
-                  onChanged: onItemChanged,
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.only(left: 10),
-                      labelText: 'Search',
-                      suffixIcon: Icon(Icons.search, color: Colors.white)),
-                ),
-              ))
+                    height: 50,
+                    margin: EdgeInsets.only(top: 20, bottom: 20),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[400]),
+                    child: TextFormField(
+                      controller: _vegetableController,
+                      onChanged: onItemChanged,
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.only(left: 10),
+                          labelText: 'Search',
+                          suffixIcon: Icon(Icons.search, color: Colors.white)),
+                    ),
+                  ))
             ],
           ),
         ),
@@ -68,7 +57,6 @@ class _VegtableScreenState extends State<VegtableScreen> {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: ListTile(
-                    // leading: Text('${index + 1}'),
                     title: Center(child: Text(newDataList[index].fname)),
                     tileColor: Colors.red[300]),
               ),
